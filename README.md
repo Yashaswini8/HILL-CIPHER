@@ -29,7 +29,46 @@ STEP-4: Multiply the two matrices to obtain the cipher text of length three.
 STEP-5: Combine all these groups to get the complete cipher text.
 
 ## PROGRAM 
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    int key[3][3], text[3], cipher[3];
+    char plaintext[100];
+    int i, j, k;
+
+    printf("Enter the plaintext (3 letters): ");
+    scanf("%s", plaintext);
+
+    printf("Enter the 3x3 key matrix:\n");
+    for(i = 0; i < 3; i++)
+        for(j = 0; j < 3; j++)
+            scanf("%d", &key[i][j]);
+
+    // Convert plaintext to numbers
+    for(i = 0; i < 3; i++)
+        text[i] = plaintext[i] - 'A';
+
+    // Matrix multiplication
+    for(i = 0; i < 3; i++)
+    {
+        cipher[i] = 0;
+        for(j = 0; j < 3; j++)
+            cipher[i] += key[i][j] * text[j];
+
+        cipher[i] = cipher[i] % 26;
+    }
+
+    printf("Cipher Text: ");
+    for(i = 0; i < 3; i++)
+        printf("%c", cipher[i] + 'A');
+
+    return 0;
+}
 
 ## OUTPUT
+<img width="1687" height="771" alt="image" src="https://github.com/user-attachments/assets/f279e726-e508-471e-90f1-71854c5e158c" />
 
 ## RESULT
+Thus, the C program to implement the Hill Cipher encryption technique was successfully written, compiled, and executed.
