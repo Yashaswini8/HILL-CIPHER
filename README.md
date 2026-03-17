@@ -2,24 +2,13 @@
 HILL CIPHER
 EX. NO: 3 AIM:
  
-
-IMPLEMENTATION OF HILL CIPHER
- 
 ## To write a C program to implement the hill cipher substitution techniques.
 
 ## DESCRIPTION:
 
 Each letter is represented by a number modulo 26. Often the simple scheme A = 0, B
 = 1... Z = 25, is used, but this is not an essential feature of the cipher. To encrypt a message, each block of n letters is  multiplied by an invertible n × n matrix, against modulus 26. To
-decrypt the message, each block is multiplied by the inverse of the m trix used for
- 
-encryption. The matrix used
- 
-for encryption is the cipher key, and it sho
- 
-ld be chosen
- 
-randomly from the set of invertible n × n matrices (modulo 26).
+decrypt the message, each block is multiplied by the inverse of the m trix used for encryption. The matrix used for encryption is the cipher key, and it should be chosen randomly from the set of invertible n × n matrices (modulo 26).
 
 
 ## ALGORITHM:
@@ -67,7 +56,7 @@ int main()
 
     return 0;
 }
-
+```
 ## OUTPUT
 <img width="1687" height="771" alt="image" src="https://github.com/user-attachments/assets/f279e726-e508-471e-90f1-71854c5e158c" />
 
